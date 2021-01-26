@@ -10,8 +10,11 @@ fun main() {
     println("${customer2.name} is ${customer2.age} years old")
 }
 
+
+
 // Classes, fields are public by default
 // The parameters are fields
+// In the parentheses in the primary constructor
 class Customer (val name: String, val address: String, var age: Int) {
 
     // This is a secondary constructor
@@ -25,5 +28,21 @@ class Customer (val name: String, val address: String, var age: Int) {
     }
 }
 
-// This short form is called a primary constructor
-class Book (val id: Long, val title: String)
+class AlternativeConstructor (val name: String, var age: Int) {
+    // Can have combo of fields in primary constructor and code block
+    var address: String
+
+    // Can initialize address val in-line or through init block
+    init {
+        address = ""
+    }
+
+    // Secondary constructor, use primary constructor
+    // and set field outside of primary constructor
+    constructor(name: String, address: String, age: Int): this(name, age) {
+        this.address = address
+    }
+
+}
+
+class Book (val id: Long, val title: String = "Default Title")
