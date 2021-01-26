@@ -1,6 +1,8 @@
 # Learning Kotlin
 
 ## Notes  
+
+### Basics
 - Kotlin can infer variable type, don't need to specify type when assigning the value
 - `val` = value, immutable
 - trying to assign `kotlin.Int` to java `Integer` and does not work
@@ -11,3 +13,7 @@
   - if you do need to cast manually use the `as` keyword
 
 
+### Classes
+- Package and folder names do not have to strictly match like in Java
+    - no real good reason to do this
+- Class name and file name do not have to strictly match either
