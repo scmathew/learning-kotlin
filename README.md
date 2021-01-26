@@ -15,5 +15,5 @@
 
 ### Classes
 - Package and folder names do not have to strictly match like in Java
-    - no real good reason to do this
+    - no real good reason to not have them match though
 - Class name and file name do not have to strictly match either
