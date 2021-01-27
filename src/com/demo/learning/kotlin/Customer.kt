@@ -53,7 +53,7 @@ data class Customer (val name: String, val address: String, var age: Int) {
 // Classes, fields are public by default
 // The parameters are fields
 // In the parentheses in the primary constructor
-class AlternativeConstructor (val name: String, var age: Int) {
+class AlternativeCustomer (val name: String, var age: Int) {
     // Can have combo of fields in primary constructor and code block
     var address: String
 
