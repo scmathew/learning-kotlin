@@ -17,3 +17,12 @@
 - Package and folder names do not have to strictly match like in Java
     - no real good reason to not have them match though
 - Class name and file name do not have to strictly match either
+
+## Object Equality
+- Java
+  - `==` checks for reference equality
+  - `.equals` checks for value equality
+- Kotlin
+  - `==` checks for value equality 
+    - shortcut for `.equals`
+  - `====` checks for reference equality

@@ -10,6 +10,46 @@ data class KotlinPerson(
         val dateOfBirth: Calendar?
 ) {
 
+    var favoriteColor: String? = null
+
+
+    fun getLastLetter(a : String) : String {
+        return a.takeLast(1)
+    }
+
+    fun getUppercaseColor() : String {
+        // if favorite color is null, return "" ?
+        // because of the "?" operator
+        return favoriteColor?.toUpperCase() ?: ""
+    }
+
+    fun getLastLetterOfColor() : String {
+        // return if (favoriteColor == null) "" else getLastLetter(favoriteColor)
+
+        // where it = favoriteColor, let allows you call a lambda on the object
+        // don't love this syntax prefer the if statement above
+        return favoriteColor?.let { getLastLetter(it) } ?: ""
+    }
+
+    fun getColorType() : String {
+        val color = getUppercaseColor()
+//         if (color == "") {
+//             return "empty"
+//         } else if (color == "RED" || color == "BLUE" || color == "GREEN") {
+//             return "RGB"
+//         } else {
+//             return "other"
+//         }
+
+        // shorter way of doing the above
+        // similar to a switch but doesn't need a default block
+        return when (color) {
+            "" -> "empty"
+            "RED", "GREEN", "BLUE" -> "rgb"
+            else -> "other"
+        }
+    }
+
     val safeAge: Int
         get() {
             // Elvis operator, similar to ternary
