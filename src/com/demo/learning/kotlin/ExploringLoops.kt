@@ -52,6 +52,4 @@ fun main() {
     ('A'..'F').forEach { println(it) }
     println("-------------")
 
-    
-
 }
