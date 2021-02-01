@@ -26,3 +26,7 @@
   - `==` checks for value equality 
     - shortcut for `.equals`
   - `====` checks for reference equality
+  
+## Exceptions
+- NO checked exceptions in Kotlin, have to be more aware/cautious of the exceptions that may 
+occur up during a function call
